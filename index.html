@@ -1,0 +1,46 @@
+<html>
+     <head>
+          <meta name="viewport" content="width=display-width,initial-scale=1">
+          <style>
+h1{
+     font-weight: bold;
+     font-style: italic;
+     color:hsl(110,10,20);
+     text-align: center;
+}
+form{
+     text-align: center;
+     background-image:linear-gradient(to bottom,yellow,orange) ;
+     padding:20px;
+     margin:30px;
+}
+button{
+     position:relative;
+     left: 40%;
+     top:30%;
+}
+          </style>
+     </head>
+     <body>
+          <h1>LOAN CALCULATOR</h1>
+          <form>
+               <input type="number" placeholder="Please Enter money borrowed (in Rs)" id="prin"><br><br>
+               <input type="number" placeholder="Enter the interest rate" id="rate"><br><br>
+               <input type="number" placeholder="Years to repay" id="time"><br><br>
+               <button type="button" onclick="document.getElementById('b').innerHTML=Number(x.value)+SI()">Calculate</button><br><br>
+               <button type="button" onclick="document.getElementById('a').innerHTML=SI()";>Calculate</button><br><br>
+               <label for="a">Total interest to be paid :</label>
+               <div id="a"></div>
+               <label for="b">Total sum to be paid</label>
+               <div id="b"></div>
+          </form>
+          <script>
+               let x=document.getElementById("prin");
+               const SI=()=>{
+                    let y=document.getElementById("rate");
+                    let z=document.getElementById("time");
+                 return ((x.value)*(y.value)*(z.value))/100;
+               }
+          </script>
+     </body>
+</html>
